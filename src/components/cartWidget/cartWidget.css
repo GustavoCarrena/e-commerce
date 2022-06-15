@@ -1,0 +1,39 @@
+
+.card-wigget-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 52%;
+    height: auto;
+    margin-right: 7%;
+}
+
+.card-widget{
+    width: 37%;
+    height: auto;
+    padding: 10% 0;
+}
+
+.card-widget:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.card-widget-counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bb1010;
+    align-self: flex-start;
+    border-radius: 50%;
+    margin-left: 2%;
+    padding: 3% 6%;
+    margin-bottom: 33px;
+}
+
+.card-widget-counter{
+    color: white;
+    font-weight: bold;
+    font-size: 0.65rem;
+}

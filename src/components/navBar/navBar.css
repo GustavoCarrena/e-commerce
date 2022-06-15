@@ -1,0 +1,47 @@
+.navbar-expand{
+    justify-content: space-between !important;
+    padding: 1% 3% !important;
+    box-shadow: 10px 5px 5px rgb(233, 227, 227) !important;
+    height: 80px;
+}
+
+.nav-container{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-expand .navbar-nav {
+    width: -webkit-fill-available !important;
+}
+
+.widget-logout-container{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 7% !important;
+}
+
+.nav-link{
+    font-weight: bold;
+    padding: 0 2.5% !important;
+    font-size: 1.15rem;
+}
+
+.nav-link:hover{
+color: #bb1010 !important;
+transform: scale(1.1)
+}
+
+.first{
+    padding: 0 2.5% 0 0 !important    ;
+}
+
+.widget-logout-container{
+    justify-self: flex-end !important;
+    width: 15% !important;
+
+}
+
+.logout{
+    padding:0 !important;
+    color: rgba(0, 0, 0, 0.274) !important;
+}
