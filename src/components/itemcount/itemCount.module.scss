@@ -1,0 +1,52 @@
+.cardsContainer {
+    background-color: #F1F1F1;
+    border: 2px solid blue;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    
+
+    .cardBody {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1F1F1;
+        width: 80% !important;
+
+        .cardTitle{
+            color: red;
+        }
+
+        .cardImg {
+            width: 30%;
+            height: 30%;
+
+        }
+
+        .cardContainer{
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .counter{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                font-weight: bold;
+                color: blue;
+            }
+        }
+        .count{
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            width: 280px;
+            height: 25px;
+            text-align: center;
+        }
+
+    }
+}
+

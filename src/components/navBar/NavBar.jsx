@@ -1,28 +1,70 @@
 import React from 'react';
+import styles from './navBar.module.scss';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import './navBar.css';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from '../cartWidget/CartWidget';
 
 export const NavBar = () => {
     return (
-        <>
-            <Navbar bg="light" variant="light">
-                <Container className='nav-container'>
+        <Navbar bg="light" expand="lg" sticky='top' className={`${styles.navBarContainer}`}>
+            <Container className={`${styles.container}`}>
+                <Navbar.Brand href="#home"><img className={styles.logo} src="/assets/img/logo.png" alt="logo" /></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className='nav-link first' href="#home">Productos</Nav.Link>
-                        <Nav.Link className='nav-link' href="#categories">Categorias</Nav.Link>
-                        <Nav.Link className='nav-link' href="#contact">Contacto</Nav.Link>
+                        <NavDropdown className={styles.navItems} variant="primary" title="Sofás" id="basic-nav-dropdown">
+                            <NavDropdown.Item className={styles.navItems} href="#link">Sofá Cama</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.1">Línea Clásica / Moderna</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.3">Línea Hi Teck</NavDropdown.Item>
+                        </NavDropdown>
+                        
+                        <NavDropdown className={styles.navItems} title="Muebles" id="basic-nav-dropdown">
+                            <NavDropdown.Item className={styles.navItems} href="#home">Rinconeros</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.1">Racks de TV</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.1">Ecsritorios</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.1">Vajilleros</NavDropdown.Item>
+                        </NavDropdown>
+                        
+                        <NavDropdown className={styles.navItems} title="Comedor" id="basic-nav-dropdown">
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.1">Mesas</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item className={styles.navItems} href="#action/3.1">Sillas</NavDropdown.Item>
+                        </NavDropdown>
+
+
+
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
+}
+
+
+
+
+
+
+
+
+{/* <Navbar classNameName={navBar.navbarExpand} bg=`light` variant=`light`>
+                <Container classNameName={navBar.navContainer}>
+                    <Nav classNameName={`me-auto ${navBar.nav}`}>
+                        <Nav.Link classNameName={`${navBar.navLink} ${navBar.first}`} href=`#home`>Productos</Nav.Link>
+                        <Nav.Link classNameName={navBar.navLink} href=`#categories`>Categorias</Nav.Link>
+                        <Nav.Link classNameName={navBar.navLink} href=`#contact`>Contacto</Nav.Link>
                     </Nav>
                 </Container>
-                <Container className='widget-logout-container'>
+                <Container classNameName={`${navBar.widgetLogoutContainer}`}>
                     <CartWidget/>
-                    <Nav.Link className='nav-link logout' href="#logOut">Salir</Nav.Link>
+                    <Nav.Link classNameName={`${navBar.navLink} ${navBar.logout}`} href=`#logOut`>Salir</Nav.Link>
                 </Container>
             </Navbar>
-            <br />
-        </>
-    )
-};
-
+            <br /> */}

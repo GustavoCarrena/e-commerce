@@ -11,6 +11,7 @@
 
 .card-widget{
     width: 37%;
+    min-width: 1rem;
     height: auto;
     padding: 10% 0;
 }
@@ -28,7 +29,7 @@
     align-self: flex-start;
     border-radius: 50%;
     margin-left: 2%;
-    padding: 3% 6%;
+    padding: 5px 10px;
     margin-bottom: 33px;
 }
 

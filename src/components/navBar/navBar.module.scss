@@ -1,0 +1,29 @@
+$font-family: 'Poppins' ,Arial,Helvetica,sans-serif;
+
+
+.navBarContainer {
+    background-color: #f1f1f1 !important;
+    box-shadow: 10px 5px 5px rgb(233, 227, 227);
+
+    .container {
+        margin: 0 2%;
+        width: 100%;
+        padding: 0 0 0 2%;
+
+        .logo {
+            height: 90px;
+            width: auto;
+        }
+
+        .navItems{
+            font-weight: bold;
+            font-family: $font-family;
+            :hover{
+                color: brown !important;
+            }
+        }
+    }
+}
+
+
+
