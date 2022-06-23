@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+@mixin flex-row-center {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+    max-width: 90%;
+    height: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    margin-bottom: 25px;
+
+    .itemCard {
+        width: 79%;
+        margin: 10px;
+        height: 350px;
+        box-shadow: 3px 3px 0 rgb(233 227 227);
+        border-radius: 9px;
+
+        .header {
+            @include flex-row-center();
+            position: absolute;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.55);
+            font-size: 1.15rem;
+            font-weight: 700;
+            width: 100%;
+            height: auto;
+            min-height: 94px;
+            background-color: #f1f1f1 !important;
+            padding: 3px;
+            
+        }
+
+        .imgContainer {
+            @include flex-row-center();
+            width: 90%;
+            align-self: center;
+            height: 280px;
+
+            .img {
+                margin-top: 103px;
+                width: 80%;
+                height: 80%;
+                max-height: 100%;
+                object-fit: contain;
+                align-self: flex-start;
+            }
+
+        }
+
+        .imgContainer:hover {
+            transform: scale(1.05);
+            transition:0.3s ease-in-out;
+        }
+
+
+    }
+
+    .text {
+        position:absolute;
+        top: -15px;
+        right: 0;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        box-shadow: 3px 3px 3px 3px rgb(233 227 227);
+        background-color: #f1f1f1 !important;
+        color: #a34502;;
+        font-weight: 700;
+        width: 250px;
+        border-radius: 5px;
+        text-align: center;
+
+    }
+
+    .button {
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+        border-radius: 10px;
+        background-color: #92420a;
+        border: none;
+        color: #dcd0d0;
+        font-family: 'Poppins';
+    }
+
+    .button:hover {
+
+        box-shadow: 0px 0px 15px 15px #ec731e;
+        color: #f1e7e7;
+        transition: 0.2s ease-in-out;
+
+    }
+
+    .stock{
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        font-family: 'Poppins';
+    }
+}

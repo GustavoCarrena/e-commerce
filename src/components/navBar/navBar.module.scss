@@ -2,8 +2,9 @@ $font-family: 'Poppins' ,Arial,Helvetica,sans-serif;
 
 
 .navBarContainer {
-    background-color: #f1f1f1 !important;
-    box-shadow: 10px 5px 5px rgb(233, 227, 227);
+    background-color: rgb(241, 241, 241) !important;
+    box-shadow: 0 5px 0 rgb(233, 227, 227);
+    height: 64px;
 
     .container {
         margin: 0 2%;
@@ -11,8 +12,7 @@ $font-family: 'Poppins' ,Arial,Helvetica,sans-serif;
         padding: 0 0 0 2%;
 
         .logo {
-            height: 90px;
-            width: auto;
+            width: 160px;
         }
 
         .navItems{

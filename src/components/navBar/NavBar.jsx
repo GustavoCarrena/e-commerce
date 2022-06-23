@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { CartWidget } from '../cartWidget/CartWidget';
 
 export const NavBar = () => {
     return (
@@ -54,17 +53,3 @@ export const NavBar = () => {
 
 
 
-{/* <Navbar classNameName={navBar.navbarExpand} bg=`light` variant=`light`>
-                <Container classNameName={navBar.navContainer}>
-                    <Nav classNameName={`me-auto ${navBar.nav}`}>
-                        <Nav.Link classNameName={`${navBar.navLink} ${navBar.first}`} href=`#home`>Productos</Nav.Link>
-                        <Nav.Link classNameName={navBar.navLink} href=`#categories`>Categorias</Nav.Link>
-                        <Nav.Link classNameName={navBar.navLink} href=`#contact`>Contacto</Nav.Link>
-                    </Nav>
-                </Container>
-                <Container classNameName={`${navBar.widgetLogoutContainer}`}>
-                    <CartWidget/>
-                    <Nav.Link classNameName={`${navBar.navLink} ${navBar.logout}`} href=`#logOut`>Salir</Nav.Link>
-                </Container>
-            </Navbar>
-            <br /> */}
