@@ -1,29 +1,67 @@
-$font-family: 'Poppins' ,Arial,Helvetica,sans-serif;
-
+$font-family: 'Poppins',
+Arial,
+Helvetica,
+sans-serif;
 
 .navBarContainer {
     background-color: rgb(241, 241, 241) !important;
     box-shadow: 0 5px 0 rgb(233, 227, 227);
     height: 64px;
+    width: 100% !important;
 
     .container {
         margin: 0 2%;
         width: 100%;
         padding: 0 0 0 2%;
 
+        @media(max-width: 768px) {
+            .basicNavbarNav {
+                width: 100vw;
+                position: absolute;
+                left: 0px;
+                top: 69px;
+                background-color: rgb(241, 241, 241) !important;
+                transition: 0.5s linear;
+
+                .meAuto {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 100vh;
+                    text-align: center;
+
+                    .navItems {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        margin-top: 31px;
+                        width: 91%;
+                        height: auto;
+                        justify-content: center;
+                        align-items: flex-start;
+
+                        :nth-child(n) {
+                            margin: 3px;
+                            background-color: rgb(241, 241, 241) !important;
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+        }
+
         .logo {
             width: 160px;
         }
 
-        .navItems{
+        .navItems {
             font-weight: bold;
             font-family: $font-family;
-            :hover{
+
+            :hover {
                 color: brown !important;
             }
         }
     }
 }
-
-
-

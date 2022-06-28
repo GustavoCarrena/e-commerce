@@ -1,0 +1,159 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: start;
+
+    @media(max-width: 768px) {
+        margin: 7% 0 0 0;
+    }
+
+    @media(max-width: 600px) {
+        margin: 10% 0 0 0;
+    }
+
+    @media(max-width: 500px) {
+        grid-template-columns: 71vh;
+        grid-template-rows: 50vh 35vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .imgContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        top: 22px;
+        text-align: center;
+
+
+        @media(max-width: 768px) {
+            top: 0;
+            padding: 0;
+        }
+
+        @media(max-width: 500px) {
+            align-items: flex-start;
+            width: fit-content;
+        }
+
+        .img {
+            width: 50%;
+            min-width: 240px;
+            height: auto;
+            max-height: 90%;
+
+            @media(max-width: 768px) {
+                min-width: 200px;
+                max-height: 100%;
+            }
+
+            @media(max-width: 500px) {
+                min-width: 150px;
+            }
+        }
+
+
+    }
+
+    .bodyContainer {
+        height: max-content;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-items: center;
+        align-items: flex-start;
+        border: none;
+        align-self: flex-start;
+        justify-self: self-start;
+        font-family: 'Poppins';
+        margin-right: 1%;
+        
+        @media(max-width: 600px) {
+           margin-left: 5%;
+           
+        }
+
+
+
+        .description {
+            margin: 17px 0 7% 0;
+            width: 66%;
+            height: auto;
+            max-height: 90px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            min-width: 482px;
+
+            @media(max-width: 768px) {
+                font-size: 0.9rem;
+                margin: 17px 0 6% 0;
+                width: 85%;
+                min-width: 0;
+            }
+
+            @media(max-width: 600px) {
+                font-size: 0.85rem;
+               
+            }
+
+            @media(max-width: 500px) {
+                width: 100%;
+                margin: 40px 0 6% 0;
+            }
+
+
+        }
+
+        .title {
+            font-family: fantasy;
+            font-size: 1.8rem;
+            margin: 30px 3% 3% 0;
+            width: 85%;
+
+            @media(max-width: 768px) {
+                font-size: 1.5rem;
+            }
+
+            @media(max-width: 600px) {
+                font-size: 1.3rem;
+            }
+
+            @media(max-width: 500px) {
+                font-size: 1.1rem;
+                position: absolute;
+                top: -173px;
+                right: 0;
+                margin: 0;
+                width: 60%;
+                text-align: end;
+            }
+
+        }
+
+        .price {
+            @media(max-width: 768px) {
+                font-size: 1.15rem;
+            }
+
+            @media(max-width: 600px) {
+                font-size: 1.05rem;
+            }
+
+            @media(max-width: 500px) {
+                position: absolute;
+                left: 47%;
+                bottom: 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+    }
+
+}

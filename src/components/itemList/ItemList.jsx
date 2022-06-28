@@ -1,9 +1,17 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { getAllProducts } from '../../helpers/getAllProducts';
 import { Item } from '../item/Item';
 import styles from '../itemList/itemList.module.scss';
 
-//Mapeo de los productos
-export const ItemList = ({ products }) => {
+
+export const ItemList = () => {
+    
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        getAllProducts(setProducts);
+    },[])
+
     return (
         <article className={styles.itemsContainer}>
             {

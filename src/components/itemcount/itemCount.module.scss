@@ -1,74 +1,80 @@
-.cardsContainer {
-    background-color: #F1F1F1;
-    border: 2px solid blue;
+.container {
+    width: auto;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 50%;
 
-    .cardBody {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        background-color: #F1F1F1;
-        width: 80% !important;
+    .stock {
 
-        .cardTitle{
-            color: red;
-        }
+        margin: -10px 0 5px 0;
 
-        .cardImg {
-            width: 70%;
-            height: auto;
-
-        }
-
-        .cardContainer{
-            width: 90%;
-            max-width: 210px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 2% 0;
-            .counter{
-                width: 100%;
-                height: auto;
-                text-align: center;
-                font-weight: bold;
-                color: blue;
-            }
-            .buttons{
-                width: 80px;
-                height: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        
-        .addButton{
-            width: 100%;
-            max-width: 150px;
-            height: 30px;
+        @media(max-width: 768px) {
             font-size: 0.8rem;
-            padding: 0;
-            font-weight:600;
+            right: 15%;
+            margin: -20px 0 10px 0;
         }
-        .count{
-            margin-top: 10px;
-            background-color: black;
-            color: white;
-            width: 100%;
-            height: 25px;
-            text-align: center;
-            font-size: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        @media(max-width: 600px) {
+            margin: -10px 0 7px 0;
+        }
+
+        @media(max-width: 500px) {
+            width: fit-content;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 5px 0;
         }
 
     }
-}
 
+    .counterContainer {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: 500px) {
+            position: absolute;
+            top: -101px;
+            right: 0;
+        }
+
+        .buttons {
+            color: white;
+            margin: 0 10px;
+            border: none;
+        }
+
+        .counter {
+            font-size: 1.2rem;
+            width: 50px;
+            height: 40px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+
+            @media(max-width: 600px) {
+                width: 40px;
+                height: 30px;
+            }
+        }
+
+    }
+
+    .addButton {
+        margin-top: 10px;
+        width: 132px;
+        background-color: rgb(4, 68, 4);
+        font-size: 0.8rem;
+        padding: 9px 5px;
+
+        @media(max-width: 600px) {
+            margin-bottom: 10px;
+        }
+    
+
+    }
+}

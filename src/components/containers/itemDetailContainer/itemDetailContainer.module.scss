@@ -1,0 +1,17 @@
+.spinner{
+    display: flex;
+    flex-flow: row wrap;
+    align-items:center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 40%;
+    right: 55%;
+
+    // width: 150px;
+
+    .loading{
+        background-color: rgb(255, 251, 251);
+        margin-left: 150px;
+    }
+}
+
