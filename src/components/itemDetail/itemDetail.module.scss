@@ -1,9 +1,9 @@
 .container {
     width: 100%;
     display: grid;
-    grid-template-columns: 40vw 60vw;
+    grid-template-columns: 30vw 70vw;
     grid-template-rows: 1fr;
-    align-items: center;
+    align-items: flex-start;
     justify-content: start;
 
     @media(max-width: 768px) {
@@ -15,23 +15,32 @@
     }
 
     @media(max-width: 500px) {
-        grid-template-columns: 71vh;
+        grid-template-columns: 66vh;
         grid-template-rows: 50vh 35vh;
         align-items: center;
         justify-content: center;
         margin: 0;
     }
 
+    @media(max-width: 465px) {
+        grid-template-columns: 85vh;
+
+    }
+
+    @media(max-width: 425px) {
+        grid-template-columns: 76vh;
+
+    }
+
     .imgContainer {
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        height: 100%;
+        height: auto;
         position: relative;
-        top: 22px;
+        top: 33px;
         text-align: center;
-
 
         @media(max-width: 768px) {
             top: 0;
@@ -83,16 +92,19 @@
 
         .description {
             margin: 17px 0 7% 0;
-            width: 66%;
+            width: 90%;
             height: auto;
-            max-height: 90px;
+            max-height: max-content;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            min-width: 482px;
+            min-width: 375px;
+
+            @media(max-width: 1000px) {
+                font-size: 0.9rem;
+            }
 
             @media(max-width: 768px) {
-                font-size: 0.9rem;
                 margin: 17px 0 6% 0;
                 width: 85%;
                 min-width: 0;
@@ -128,7 +140,7 @@
             @media(max-width: 500px) {
                 font-size: 1.1rem;
                 position: absolute;
-                top: -173px;
+                top: -276px;
                 right: 0;
                 margin: 0;
                 width: 60%;

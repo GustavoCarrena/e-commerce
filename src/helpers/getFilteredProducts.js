@@ -1,5 +1,3 @@
-
-
 const forcedDelay = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(`https://fakestoreapi.com/products`);
@@ -7,17 +5,13 @@ const forcedDelay = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-export const getAllProducts = async (setProducts, category) => {
-    try {
-        
+export const getFilteredProducts = async (setFilteredProducts) => {
+       try {
         const url = await forcedDelay;
         const response = await fetch(url);
         const data = await response.json();
-        setProducts(category ? data.filter(product => product.category === category): data);
+        setFilteredProducts(data);
     } catch (error) {
         throw new Error(error);
     }
 };
-
-
-

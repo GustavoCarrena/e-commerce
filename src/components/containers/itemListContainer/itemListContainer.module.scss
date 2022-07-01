@@ -1,0 +1,23 @@
+.spinner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 25%;
+    right: 45%;
+    background-color: #fff;
+    padding: 50px 100px;
+    box-shadow: inset 9px 9px 44px 3px rgb(255, 255, 255);
+    opacity:1;
+    border: none;
+
+    .loading {
+        color: rgb(77, 76, 81) !important;
+        font-weight: bold;
+        z-index: 999;
+        font-size: 1.8rem;
+        opacity: 0.35;
+    }
+}
+

@@ -14,7 +14,7 @@ sans-serif;
         width: 100%;
         padding: 0 0 0 2%;
 
-        @media(max-width: 768px) {
+        @media(max-width: 990px) {
             .basicNavbarNav {
                 width: 100vw;
                 position: absolute;
@@ -39,6 +39,7 @@ sans-serif;
                         height: auto;
                         justify-content: center;
                         align-items: flex-start;
+                        text-decoration: none !important;
 
                         :nth-child(n) {
                             margin: 3px;
@@ -58,10 +59,48 @@ sans-serif;
         .navItems {
             font-weight: bold;
             font-family: $font-family;
+            display: flex;
+            flex-flow: row nowrap;
+            margin-top: 4px;
+            width: 91%;
+            height: auto;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.55) !important;
+            text-decoration: none !important;
+            padding: 0 20px;
 
             :hover {
                 color: brown !important;
             }
+
+            &:hover {
+                color: brown !important;
+            }
+        }
+
+        .navItemsDrop{
+            font-weight: bold;
+            font-family: $font-family;
+            display: flex;
+            flex-flow: row nowrap;
+            width:100%;
+            height: auto;
+            justify-content:center;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.55) !important;
+            text-decoration: none !important;
+            padding: 1%;
+            
+            :hover {
+                color: brown !important;
+            }
+
+            &:hover {
+                color: brown !important;
+            }
         }
     }
+
+
 }
