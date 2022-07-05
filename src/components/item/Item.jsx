@@ -1,13 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../item/item.module.scss";
-// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-// import { useEffect } from "react";
-// import { ItemCount } from '../itemcount/ItemCount'
 
-// Producto.  Información breve del producto que el user clickeará luego para acceder a los detalles
+  /**
+   * @description  Access to product detail
+   * @param {Object} product  Mapped data from <ItemList/>
+   * @returns {void} Card Render
+   */
 export const Item = ({ product }) => {
+
   const stockRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
@@ -28,9 +30,6 @@ export const Item = ({ product }) => {
         <Card.Text className={styles.text}>
           Categoría: {product.category}
         </Card.Text>
-        {/* <Button className={styles.button}>
-          Ver detalle del producto
-        </Button> */}
         <Card.Text className={styles.stock}>
           Stock: {stockRandom(5, 20)}
         </Card.Text>

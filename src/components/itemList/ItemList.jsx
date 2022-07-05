@@ -1,8 +1,6 @@
-// import { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import { getAllProducts } from "../../helpers/getAllProducts";
 import { Item } from "../item/Item";
 import styles from "../itemList/itemList.module.scss";
+
 
 export const ItemList = ({products}) => {
 

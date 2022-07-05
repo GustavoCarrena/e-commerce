@@ -1,15 +1,15 @@
 import styles from "../itemcount/itemCount.module.scss";
 import { useCounter } from "../../hooks/useCounter";
 
-export const ItemCount = ({ initialValue, stock,onAdd }) => {
+
+export const ItemCount = ({ initialValue, stock, onConfirm }) => {
   
   const { counter, increment, decrement } = useCounter(initialValue, stock);
-  
+
   return (
     <div className={styles.container}>
       <p className={styles.stock}>Unidades Disponibles: {stock}</p>
       <div className={styles.counterContainer}>
-      
       <button
         type="button"
         className={`btn btn-danger ${styles.buttons}`}
@@ -28,10 +28,9 @@ export const ItemCount = ({ initialValue, stock,onAdd }) => {
         id="button"
         type="button"
         className={`btn btn-secondary ${styles.addButton}`}
-        onClick={onAdd}
+        onClick={() => onConfirm(counter)}
       > Agregar al Carrito
       </button>
-      
     </div>
   );
 };

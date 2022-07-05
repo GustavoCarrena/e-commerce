@@ -6,6 +6,7 @@ import { NavBar } from "./components/navBar/NavBar";
 import { ItemDetailContainer } from "./components/containers/itemDetailContainer/ItemDetailContainer";
 import { ItemListContainer } from "./components/containers/itemListContainer/ItemListContainer";
 import { PageNotFound } from "./components/pageNotFound/PageNotFound";
+import { Cart } from "./components/containers/cart/Cart";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
         <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={<Cart/>}/>
         <Route path="*" element={<PageNotFound />} />
 
       </Routes>
