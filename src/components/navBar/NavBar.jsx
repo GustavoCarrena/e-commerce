@@ -20,6 +20,7 @@ export const NavBar = () => {
         <Navbar bg="light" expand="lg" sticky='top' className={`${styles.navBarContainer}`}>
             <Container style={{ 'maxWidth': '100%' }} className={`${styles.container}`}>
             <Link to={'/'}><img src='/assets/img/logo.png' className={styles.logo} alt="logo" /></Link>
+                <CartWidget className={styles.cartWidget}/>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id='basic-navbar-nav' className={styles.basicNavbarNav}>
                     <Nav className={`"me-auto" ${styles.meAuto}`}>
@@ -34,7 +35,6 @@ export const NavBar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-                <CartWidget className={styles.cartWidget}/>
         </Navbar>
     );
 }

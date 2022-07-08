@@ -1,0 +1,167 @@
+@mixin flex($direction, $wrap, $justify-content, $align-items) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify-content;
+    align-items: $align-items
+}
+
+@mixin buttons($b-color,$radius ,$color, $padding){
+    border: none;
+    background-color: $b-color;
+    border-radius: $radius;
+    color: $color;
+    padding: $padding;
+}
+
+.body{
+    @include flex(column, nowrap, flex-start, center);
+    height: 100%;
+    margin: 50px 0 0 2%;
+    width: 96vw;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Poppins';
+    font-size: 0.95rem;
+    .container {
+        justify-self: center;
+        align-self: center;
+        min-width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    
+        .headerRow {
+            @include flex(row, nowrap, center, center);
+            width: inherit;
+            background-color: rgb(240, 240, 240);
+            padding: 0;
+            margin: 0;
+            border-radius: 8px;
+            opacity: 0.7;
+
+            .headerCol1{
+                max-width: 7%;
+                padding: 0;
+                visibility: hidden;
+            }
+
+            .headerCol2{
+                max-width: 42%;
+                padding: 0;
+                visibility: hidden;
+
+            }
+    
+            .headerCol3{
+                max-width: 15%;
+                padding: 0;
+
+            }
+
+            .headerCol4{
+                max-width: 15%;
+                padding: 0;
+
+            }
+            .headerCol5{
+                max-width: 15%;
+                padding: 0;
+
+            }
+            .headerCol6{
+                max-width: 6%;
+                padding: 0;
+                visibility: hidden;
+
+            }
+        }
+
+    
+        .bodyRow{
+            @include flex(row, nowrap, center, center);
+            width: inherit;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+                .bodyCol1{
+                    @include flex(column, nowrap, center, center);
+                    max-width: 7%;
+                    padding: 0;
+                    margin: 0;
+                    text-align: left;
+                    img{
+                        width: auto;
+                        max-height: 100px;
+                    }
+                }
+
+                .bodyCol2{
+                    @include flex(column, nowrap, center, flex-start);
+                    max-width: 42%;
+                    padding: 0 0 0 3%;
+                    margin: 0;
+                    text-align: left
+                }
+
+                .bodyCol3{
+                    @include flex(column, nowrap, center, center);
+                    max-width: 15%;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .bodyCol4{
+                    @include flex(column, nowrap, center, center);
+                    max-width: 15%;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .bodyCol5{
+                    @include flex(column, nowrap, center, center);
+                    max-width: 15%;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .bodyCol6{
+                    @include flex(column, nowrap, center, center);
+                    max-width: 6%;
+                    padding: 0;
+                    margin: 0;
+                    img{
+                        width: 40%;
+                        height: auto;
+                        cursor: pointer;
+                        opacity: 0.9;
+                    }
+                    img:hover{
+                        opacity: 1;
+                    }
+                    
+                }
+        }
+    }
+}
+
+.submitCoontainer{
+    @include flex(row, nowrap, flex-start, center);
+    margin-top: 20px;
+    width: 100%;
+    
+    .clearBtn{
+        @include buttons(rgba(197, 26, 17, 0.806), 8px ,rgba(255, 255, 255, 0.779), 8px);
+        justify-self: flex-start;
+        margin: 0 37% 0 0%;
+        font-size: 0.8rem;
+    }
+    .buyBtn{
+        @include buttons(rgba(6, 97, 15, 0.89), 8px ,#fff, 10px);
+        min-width: 130px;
+        font-size: 0.9rem;
+    }
+}
+
+

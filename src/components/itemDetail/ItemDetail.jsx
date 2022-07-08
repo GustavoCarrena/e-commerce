@@ -1,6 +1,8 @@
 import { useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { ItemCount } from "../itemcount/ItemCount";
+import { useContext } from "react";
+import { Shop } from "../../context/ShopContext";
 import "animate.css";
 import styles from "../itemDetail/itemDetail.module.scss";
 import Card from "react-bootstrap/Card";
@@ -11,15 +13,14 @@ export const ItemDetail = ({ product }) => {
   //Parcial hasta que se Calcule stock - compra
   const random = () => Math.floor(Math.random() * 10 + 1);
   const stock = random(1, 50);
-  
+  const [show, setShow] = useState(false);
+  const {addProduct} = useContext(Shop);
   const navigate = useNavigate();
 
-  const [show, setShow] = useState(false);
-
   const handle = {
-    confirm : (counter) => {setShow(true);console.log({...product, quantity: counter})},
+    confirm : (counter) => { setShow(true); addProduct(product, counter)},
     toHome : () => navigate('/'),
-    toCart : () => navigate('/cart')
+    toCart : () => {navigate('/cart')}
   };
   
   return (
@@ -52,7 +53,7 @@ export const ItemDetail = ({ product }) => {
             <div>
               <Button variant="primary" onClick={handle.toHome}>Seguir Comprando</Button>
               <span>  </span>
-              <Button variant="success" onClick={handle.toCart}>Confirmar Compra</Button>
+              <Button variant="success" onClick={handle.toCart}>Ir al Comprar</Button>
             </div>
             </>
         }
