@@ -1,53 +1,41 @@
-import React, { createContext, useState } from "react";
-import { useEffect } from "react";
+import React, { createContext, useMemo, useState } from "react";
+import { CartItem } from "../classes/CartItem";
 
 export const Shop = createContext();
 
 export const ShopContext = ({ children }) => {
   
   const [cart, setCart] = useState([]);
-  const [mount, setMount] = useState([]);
 
-  const isInCart = (product) => cart.find((p) => p.id === product.id);
-  const newCart = (product) => cart.filter((p) => p.id !== product.id);
-  const newMount = () => mount.filter(m => m ); 
-  // const newMount = (product) => {
-  //   newCart.map((p) => p === product).reduce((prev,curr) => prev + curr,0)
+  const isInCart = (product) => cart.find((item) => item.product.id === product.id);
 
-  // }
-
-
-  
-  
   const addProduct = (product, counter) => {
-    const duplicateProductInCart = isInCart(product);
-    if (duplicateProductInCart) {
-      duplicateProductInCart.quantity += counter;
+    const duplicated = isInCart(product)
+    if(duplicated) {
+      duplicated.setQuantity(duplicated.quantity + counter)
       setCart([...cart]);
     } else {
-      setCart([...cart, { ...product, quantity: counter }]);
+      const cartItem = new CartItem(product, counter)
+      setCart([...cart, cartItem])
     }
-  };
-  
-  const totalProductPrice = (price, quantity) => price * quantity;
-  
-  const totalCartPrice = () => {
-    setMount([cart.map(item => (item.price.toFixed(2) * item.quantity)).reduce((prev,curr) => prev + curr,0)])
-  };
+  }
+
+  const totalCartPrice = useMemo(() => {
+    return cart.map(item => parseFloat(item.totalMount())).reduce((prev,curr) => prev + curr,0).toFixed(2);
+  }, [cart]) 
+
+ 
   
   const clearAllCart = () => setCart([]);
   
   const clearProduct = (product) => {
-    setCart(newCart(product));
-    setMount(newMount())
+    const currentCart = [...cart]
+    const newCart = currentCart.filter(item => item.product.id !== product.id)
+    setCart(newCart);
   };
-
-
-  
-  
   
   return (
-    <Shop.Provider value={{cart, setCart, addProduct, clearProduct, clearAllCart,totalProductPrice, totalCartPrice, mount}}>
+    <Shop.Provider value={{cart, setCart, addProduct, clearProduct, clearAllCart, totalCartPrice }}>
       {children}
     </Shop.Provider>
   );
