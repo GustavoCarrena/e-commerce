@@ -1,13 +1,23 @@
 import React, { createContext, useState } from "react";
+import { useEffect } from "react";
 
 export const Shop = createContext();
 
 export const ShopContext = ({ children }) => {
   
   const [cart, setCart] = useState([]);
+  const [mount, setMount] = useState([]);
 
   const isInCart = (product) => cart.find((p) => p.id === product.id);
-  const newCart = (product) => cart.filter((p) => p !== product); 
+  const newCart = (product) => cart.filter((p) => p.id !== product.id);
+  const newMount = () => mount.filter(m => m ); 
+  // const newMount = (product) => {
+  //   newCart.map((p) => p === product).reduce((prev,curr) => prev + curr,0)
+
+  // }
+
+
+  
   
   const addProduct = (product, counter) => {
     const duplicateProductInCart = isInCart(product);
@@ -19,18 +29,25 @@ export const ShopContext = ({ children }) => {
     }
   };
   
-  const clear = {
-    product: (product) => setCart(newCart(product)),
-    allCart:  () => setCart([])
+  const totalProductPrice = (price, quantity) => price * quantity;
+  
+  const totalCartPrice = () => {
+    setMount([cart.map(item => (item.price.toFixed(2) * item.quantity)).reduce((prev,curr) => prev + curr,0)])
+  };
+  
+  const clearAllCart = () => setCart([]);
+  
+  const clearProduct = (product) => {
+    setCart(newCart(product));
+    setMount(newMount())
   };
 
-  const totalProductPrice = (price, quantity) => price* quantity;
 
-  // const deleteProduct = (product) => setCart(newCart(product));
-  // const deleteAllProducts = () => setCart([]);
-
+  
+  
+  
   return (
-    <Shop.Provider value={{cart, setCart, addProduct, clear, totalProductPrice}}>
+    <Shop.Provider value={{cart, setCart, addProduct, clearProduct, clearAllCart,totalProductPrice, totalCartPrice, mount}}>
       {children}
     </Shop.Provider>
   );
