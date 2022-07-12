@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getAllProducts } from '../../../helpers/getAllProducts';
 import { ItemList } from "../../itemList/ItemList";
+import { Loader } from "../../loader/Loader";
 import styles from "../itemListContainer/itemListContainer.module.scss";
 
 export const ItemListContainer = () => {
@@ -21,13 +22,19 @@ export const ItemListContainer = () => {
   return (
     <div className={`${styles.container}`}>
         {
-          (products.length === 0)
-            ?      
-            <div className={`${styles.spinner} spinner-grow`} role="status">
-              <span className={`${styles.loading}`}>Loading...</span>
-            </div>
+          products.length === 0
+           ? 
+            <Loader/>
+
             : (<ItemList products={products} />)
+
+
+          // (products.length === 0)
+          //   ?      
+          //     <Loader loading={true}/>
+          //   : (<ItemList products={products} />)
         }
     </div>
   )
 };
+

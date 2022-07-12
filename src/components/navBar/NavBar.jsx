@@ -24,7 +24,6 @@ export const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id='basic-navbar-nav' className={styles.basicNavbarNav}>
                     <Nav className={`"me-auto" ${styles.meAuto}`}>
-                    {/* <div onClick={handleCategory} className={styles.navItems}>Jewelery</div> */}
                     <NavLink to='/category/jewelery' className={styles.navItems} >Jewelery</NavLink>
                     <NavLink to='/category/electronics' className={styles.navItems}>Electronics</NavLink>
                         <NavDropdown className={`${styles.navItems}`} variant="primary" title="Clothing" id="basic-nav-dropdown">

@@ -1,12 +1,11 @@
-import { useState} from "react";
+import { useState, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { ItemCount } from "../itemcount/ItemCount";
-import { useContext } from "react";
 import { Shop } from "../../context/ShopContext";
-import "animate.css";
-import styles from "../itemDetail/itemDetail.module.scss";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import styles from "../itemDetail/itemDetail.module.scss";
+import "animate.css";
 
 
 export const ItemDetail = ({ product }) => {

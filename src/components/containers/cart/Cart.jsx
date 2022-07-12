@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Shop } from "../../../context/ShopContext";
 import styles from "./cart.module.scss";
 import Container from "react-bootstrap/Container";
@@ -7,20 +8,31 @@ import Col from "react-bootstrap/Col";
 
 export const Cart = () => {
   
-  const { cart, clearProduct, clearAllCart, totalCartPrice } = useContext(Shop);
+  const { cart, clearProduct, clearAllCart, totalCartPrice  } = useContext(Shop);
   const handleClearAllProducts = () => clearAllCart();
-
-  console.log(cart);
-  
+  const navigate = useNavigate()
+  const handleButtonCart = () => navigate('/')
   return (
     <div className={styles.body}>
-       {cart.length > 0 && (
-         <div className={styles.submitCoontainer}>
-          <div>Monto Total: ${totalCartPrice}</div>
-            <button className={styles.buyBtn} >Comprar</button>
-          <button className={styles.clearBtn} onClick={handleClearAllProducts}>Limpiar Carrito</button>
-        </div>
-      )}
+       {cart.length > 0 ?
+        (
+          <div className={styles.submitCoontainer}>
+            <div>Monto Total: ${totalCartPrice}</div>
+              <button className={styles.buyBtn} >Comprar</button>
+            <button className={styles.clearBtn} onClick={handleClearAllProducts}>Limpiar Carrito</button>
+          </div>
+        )
+        : (
+            <div className={styles.container}>
+              <img className={styles.img} src="/assets/img/cart.svg" alt="imag" />
+              <div className={styles.info}>
+                <p className={styles.title}>No hay productos en el carrito</p>
+                <button onClick={handleButtonCart} className={styles.button}>Ir a comprar</button>
+              </div>
+            
+            </div>
+          )
+      }
       {cart.map((item) => {
         return (
           <Container className={styles.container} key={item.product.id}>

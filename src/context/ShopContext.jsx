@@ -14,7 +14,7 @@ export const ShopContext = ({ children }) => {
     if(duplicated) {
       duplicated.setQuantity(duplicated.quantity + counter)
       setCart([...cart]);
-    } else {
+    } else{
       const cartItem = new CartItem(product, counter)
       setCart([...cart, cartItem])
     }
@@ -23,8 +23,6 @@ export const ShopContext = ({ children }) => {
   const totalCartPrice = useMemo(() => {
     return cart.map(item => parseFloat(item.totalMount())).reduce((prev,curr) => prev + curr,0).toFixed(2);
   }, [cart]) 
-
- 
   
   const clearAllCart = () => setCart([]);
   
@@ -33,7 +31,7 @@ export const ShopContext = ({ children }) => {
     const newCart = currentCart.filter(item => item.product.id !== product.id)
     setCart(newCart);
   };
-  
+
   return (
     <Shop.Provider value={{cart, setCart, addProduct, clearProduct, clearAllCart, totalCartPrice }}>
       {children}

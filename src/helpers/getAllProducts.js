@@ -9,7 +9,6 @@ const forcedDelay = new Promise((resolve, reject) => {
 
 export const getAllProducts = async (setProducts, category) => {
     try {
-        
         const url = await forcedDelay;
         const response = await fetch(url);
         const data = await response.json();
@@ -17,6 +16,7 @@ export const getAllProducts = async (setProducts, category) => {
     } catch (error) {
         throw new Error(error);
     }
+    
 };
 
 

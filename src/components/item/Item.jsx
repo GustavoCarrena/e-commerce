@@ -3,11 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "../item/item.module.scss";
 import Card from "react-bootstrap/Card";
 
-  /**
-   * @description  Access to product detail
-   * @param {Object} product  Mapped data from <ItemList/>
-   * @returns {void} Card Render
-   */
 export const Item = ({ product }) => {
 
   const stockRandom = (min, max) => {
