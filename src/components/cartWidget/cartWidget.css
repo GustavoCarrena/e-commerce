@@ -5,13 +5,16 @@
     align-items: center;
     justify-content: center;
     width: 7%;
+    min-width: 34px;
     height: auto;
     margin-right: 6%;
+    position: absolute;
+    right: 0;
 }
 
 .card-widget{
     width: 35px;
-    min-width: 1rem;
+    min-width: 30px;
     height: auto;
     padding: 10% 0;
     opacity: 0.5;
@@ -25,6 +28,7 @@
     z-index: 999;
 
 }
+
 
 .card-widget-counter-container{
     display: flex;
@@ -42,4 +46,40 @@
     color: white;
     font-weight:bolder;
     font-size: 0.65rem;
+}
+
+@media(max-width: 990px) {
+    .card-wigget-container{
+        left: 75%;
+    }
+}
+
+@media(max-width: 767px) {
+    .card-wigget-container{
+        left: 73%;
+    }
+}
+
+@media(max-width: 600px) {
+    .card-wigget-container{
+        left: 70%;
+    }
+}
+
+@media(max-width: 500px) {
+    .card-wigget-container{
+        left: 68%;
+    }
+}
+
+@media(max-width: 425px) {
+    .card-wigget-container{
+        left: 65%;
+    }
+}
+
+@media(max-width: 375px) {
+    .card-wigget-container{
+        left: 62%;
+    }
 }

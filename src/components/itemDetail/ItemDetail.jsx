@@ -23,13 +23,10 @@ export const ItemDetail = ({ product }) => {
   };
   
   return (
-    <div
-      className={`${styles.container} animate__animated animate__backInLeft`}
-    >
+    <div className={`${styles.container} animate__animated animate__backInLeft`}>
       <div className={styles.imgContainer}>
         <Card.Img variant="top" src={product.image} className={styles.img} />
       </div>
-
       <Card className={styles.bodyContainer}>
         <Card.Title className={styles.title}>{product.title}</Card.Title>
         <Card.Title className={styles.price}>
@@ -48,13 +45,37 @@ export const ItemDetail = ({ product }) => {
             onConfirm={handle.confirm}
             />
           : 
-          <>
-            <div>
-              <Button variant="primary" onClick={handle.toHome}>Seguir Comprando</Button>
+
+            <div className="continueBuy" style={{
+              display: 'flex',
+              'flex-flow': 'row nowrap',
+              'align-items': 'center',
+              'justify-content': 'space-between',
+              width:'100%'
+            }}>
+              <Button variant="primary" onClick={handle.toHome}
+              style={{
+                'font-size': '0.8rem',
+                  width:'135px',
+                  padding: '8px 3px'
+              }}
+              >
+                Seguir Comprando
+              </Button>
               <span>  </span>
-              <Button variant="success" onClick={handle.toCart}>Ir al Comprar</Button>
+              <Button 
+                variant="success"
+                onClick={handle.toCart}
+                style={{
+                  'font-size': '0.8rem',
+                  width:'135px',
+                  padding: '8px 3px'
+                }}
+              >
+                Ir al Comprar
+              </Button>
             </div>
-            </>
+
         }
       </Card>
     </div>

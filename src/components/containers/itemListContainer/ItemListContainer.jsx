@@ -25,14 +25,7 @@ export const ItemListContainer = () => {
           products.length === 0
            ? 
             <Loader/>
-
             : (<ItemList products={products} />)
-
-
-          // (products.length === 0)
-          //   ?      
-          //     <Loader loading={true}/>
-          //   : (<ItemList products={products} />)
         }
     </div>
   )

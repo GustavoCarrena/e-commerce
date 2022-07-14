@@ -15,7 +15,7 @@
 
 @mixin header-col ($max-width, $visibility) {
     position: relative;
-    top: 30px;
+    top: 16px;
     max-width: $max-width;
     visibility: $visibility;
     padding: 0;
@@ -33,39 +33,47 @@
     justify-self: center;
     font-family: 'Poppins';
     font-size: 0.95rem;
+
     .submitCoontainer {
         @include flex(row, nowrap, space-between, center);
         margin: 0;
         padding: 0;
-        width: 100%;
+        width: 94%;
+        
+            .buyBtn {
+                box-shadow: 1px 3px 0px 0px #3dc21b;
+                background: linear-gradient(to bottom, #44c767 5%, #8dd168 100%);
+                background-color: #44c767;
+                border-radius: 15px;
+                border: none;
+                display: inline-block;
+                cursor: pointer;
+                color: #ffffff;
+                font-size: 0.9rem;
+                padding: 5px 15px 2px 15px;
+                text-decoration: none;
+                text-shadow: 0px 1px 0px #2f6627;
+                min-width: 140px;
+                font-family: 'Poppins';
+
+                @media(max-width: 500px){
+                    padding: 3px 13px 1px 13px;
+                    font-size: 0.8rem;
+                }
+
+            }
+            .buyBtn:hover{
+                background:linear-gradient(to bottom, #8dd168 5%, #44c767 100%);
+                background-color:#8dd168;
+            }
+        
+            .buyBtn:active{
+                position:relative;
+                top:1px;
+            }
+
     
-    
-        .buyBtn {
-            box-shadow: 1px 3px 0px 0px #3dc21b;
-            background: linear-gradient(to bottom, #44c767 5%, #8dd168 100%);
-            background-color: #44c767;
-            border-radius: 15px;
-            border: none;
-            display: inline-block;
-            cursor: pointer;
-            color: #ffffff;
-            font-family: Arial;
-            font-size: 0.9rem;
-            padding: 5px 15px;
-            text-decoration: none;
-            text-shadow: 0px 1px 0px #2f6627;
-            min-width: 140px;
-            font-family: 'Poppins';
-        }
-        .buyBtn:hover{
-            background:linear-gradient(to bottom, #8dd168 5%, #44c767 100%);
-            background-color:#8dd168;
-        }
-    
-        .buyBtn:active{
-            position:relative;
-            top:1px;
-        }
+
         .clearBtn {
             box-shadow: 1px 3px 0px 0px #8a2a21;
             background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
@@ -75,13 +83,16 @@
             display:inline-block;
             cursor:pointer;
             color:#ffffff;
-            font-family:Arial;
             font-size:0.9rem;
-            padding:5px 15px;
+            padding:5px 15px 2px 15px;
             text-decoration:none;
             text-shadow:0px 1px 0px #810e05;
             font-family: 'Poppins';
 
+            @media(max-width: 500px){
+                padding: 3px 13px 1px 13px;
+                font-size: 0.8rem;
+            }
         }
         .clearBtn:hover {
             background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
@@ -98,10 +109,18 @@
     .container {
         justify-self: center;
         align-self: center;
-        min-width: 100%;
+        width: 90vw;
         text-align: center;
         padding: 0;
         margin: 3px 0;
+
+        @media(max-width: 500px){
+            width: 94vw;
+            border-top: 1px solid rgb(224, 219, 219);
+            border-bottom: 1px solid rgb(224, 219, 219);
+            padding: 10px 0;
+        }
+
 
         .headerRow {
             @include flex(row, nowrap, center, center);
@@ -110,29 +129,61 @@
             margin: 0;
             border-radius: 8px;
             opacity: 0.7;
+            font-size: 0.9rem;
+
+            @media(max-width: 850px){
+                font-size: 0.85rem;
+            }
+
+            @media(max-width: 800px){
+                font-size: 0.8rem;
+            }
+
+            @media(max-width: 680px){
+                font-size: 0.75rem;
+            }
+
+            @media(max-width: 535px){
+                text-align: center;
+                text-indent: 0;
+                white-space: break-spaces;
+            }
+
+            @media(max-width: 500px){
+                font-size: 0.72rem;
+            }
 
             .headerCol1 {
-                @include header-col(7%, hidden);
+                @include header-col(8%, hidden);
             }
 
             .headerCol2 {
-                @include header-col(42%, hidden);
+                @include header-col(33%, hidden);
             }
 
             .headerCol3 {
-                @include header-col(15%, visible);
+                @include header-col(18%, visible);
+                @media(max-width: 500px){
+                    top: 5px;
+                }
             }
 
             .headerCol4 {
-                @include header-col(15%, visible);
+                @include header-col(18%, visible);
+                @media(max-width: 500px){
+                    top: 0;
+                }
             }
 
             .headerCol5 {
-                @include header-col(19%, visible);
+                @include header-col(20%, visible);
+                @media(max-width: 500px){
+                    top: 0;
+                }
             }
 
             .headerCol6 {
-                @include header-col(2%, hidden);
+                @include header-col(3%, hidden);
 
             }
         }
@@ -146,59 +197,87 @@
             padding: 0;
             opacity: 0.9;
 
+            @media(max-width: 768px){
+                font-size: 0.85rem;
+            }
+
+
             .bodyCol1 {
                 @include flex(column, nowrap, center, center);
-                max-width: 7%;
+                max-width: 8%;
                 padding: 0;
                 margin: 0;
                 text-align: left;
 
                 img {
-                    width: auto;
-                    max-height: 100px;
+                    max-width: 100%;
+                    max-height: 60px;
+                    min-height: 60px;
                 }
             }
 
             .bodyCol2 {
                 @include flex(column, nowrap, center, flex-start);
-                max-width: 42%;
+                max-width: 33%;
                 padding: 0 0 0 3%;
                 margin: 0;
                 text-align: left
+               
             }
+            @media(max-width: 535px){
+                padding: 0 0 1% 0.5%;
+                margin: 0;
+                text-align: center;
+                text-indent: 0;
+                white-space: break-spaces;
+                font-size: 0.75rem;
+            }
+            @media(max-width: 425px){
+                font-size: 0.65rem;
+            }
+
 
             .bodyCol3 {
                 @include flex(column, nowrap, center, center);
-                max-width: 15%;
+                max-width: 18%;
                 padding: 0;
                 margin: 0;
             }
 
             .bodyCol4 {
                 @include flex(column, nowrap, center, center);
-                max-width: 15%;
+                max-width: 18%;
                 padding: 0;
                 margin: 0;
             }
 
             .bodyCol5 {
                 @include flex(column, nowrap, center, center);
-                max-width: 19%;
+                max-width: 20%;
                 padding: 0;
                 margin: 0;
             }
 
             .bodyCol6 {
                 @include flex(column, nowrap, center, center);
-                max-width: 2%;
+                max-width: 3%;
                 padding: 0;
                 margin: 0;
 
                 img {
-                    width: auto;
-                    height: 26px;
+                    width: 27px;
+                    height: auto;
                     cursor: pointer;
-                    opacity: 0.9;
+                    opacity: 0.8;
+                    
+                    @media(max-width: 768px){
+                        width: 23px;
+                    }
+
+                    @media(max-width: 500px){
+                        width: 20px;
+                        margin-left: -15px
+                    }
                 }
 
                 img:hover {
@@ -252,4 +331,22 @@
     }
 
 }
+
+.buyMount{
+    width: 93%;
+    position: relative;
+    top: 14px;
+    font-size: 1rem;
+    opacity: 0.5;
+
+    @media(max-width: 768px){
+        font-size: 0.9rem;
+    }
+
+    @media(max-width: 500px){
+        font-size: 0.75rem;
+    }
+
+}
+
 

@@ -4,6 +4,7 @@ import { Shop } from "../../context/ShopContext";
 import "./cartWidget.css";
 
 export const CartWidget = () => {
+  
   const { cart } = useContext(Shop);
   
   const navigate = useNavigate();

@@ -16,11 +16,14 @@ export const Cart = () => {
     <div className={styles.body}>
        {cart.length > 0 ?
         (
+          <>
           <div className={styles.submitCoontainer}>
-            <div>Monto Total: ${totalCartPrice}</div>
               <button className={styles.buyBtn} >Comprar</button>
+              {/* <div className={styles.buyMount}>Monto Total: ${totalCartPrice}</div>  */}
             <button className={styles.clearBtn} onClick={handleClearAllProducts}>Limpiar Carrito</button>
           </div>
+          <div className={styles.buyMount}><span>Monto Total: ${totalCartPrice}</span></div> 
+          </>
         )
         : (
             <div className={styles.container}>
@@ -41,7 +44,7 @@ export const Cart = () => {
               <Col className={styles.headerCol2}>Titulo</Col>
               <Col className={styles.headerCol3}>Cantidad</Col>
               <Col className={styles.headerCol4}>Precio Unitario</Col>
-              <Col className={styles.headerCol5}>Precio Total Producto</Col>
+              <Col className={styles.headerCol5}>Total Producto</Col>
               <Col className={styles.headerCol6}>Eliminar</Col>
             </Row>
             <Row className={styles.bodyRow}>
@@ -59,7 +62,7 @@ export const Cart = () => {
           </Container>
         );
       })}
-     
+      {/* <div className={styles.buyMount}><span>Monto Total: ${totalCartPrice}</span></div>  */}
     </div>
   );
 };

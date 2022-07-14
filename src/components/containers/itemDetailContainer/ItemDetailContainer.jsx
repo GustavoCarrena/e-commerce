@@ -4,6 +4,7 @@ import { getProductById } from "../../../helpers/getProductById";
 import { ItemDetail } from "../../itemDetail/ItemDetail";
 import { Loader } from "../../loader/Loader";
 
+
 export const ItemDetailContainer = () => {
   
   const [productDetail, setProductDetail] = useState(null);
@@ -12,7 +13,11 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     getProductById(setProductDetail, productId);
+    // getProductById(setProductDetail, '6HtaTGYJH01PMM7jtsmQ');
   }, [productId]);
+
+
+
 
   return (
     <>

@@ -3,6 +3,7 @@ Arial,
 Helvetica,
 sans-serif;
 
+
 .navBarContainer {
     background-color: rgb(241, 241, 241) !important;
     box-shadow: 0 5px 0 rgb(233, 227, 227);
@@ -15,6 +16,7 @@ sans-serif;
         padding: 0 0 0 2%;
 
         @media(max-width: 990px) {
+            
             .basicNavbarNav {
                 width: 100vw;
                 position: absolute;
@@ -31,21 +33,23 @@ sans-serif;
                     height: 100vh;
                     text-align: center;
 
-                    .navItems {
+                    .navItems, .navbar-light .navbar-nav .show > .nav-link {
                         display: flex;
                         flex-flow: column nowrap;
                         margin-top: 31px;
-                        width: 91%;
+                        width: 100%;
                         height: auto;
                         justify-content: center;
-                        align-items: flex-start;
+                        align-items:center;
                         text-decoration: none !important;
+                        font-size: 1.4rem;
 
                         :nth-child(n) {
                             margin: 3px;
                             background-color: rgb(241, 241, 241) !important;
                             border: none;
                         }
+
                     }
                 }
             }
@@ -54,6 +58,8 @@ sans-serif;
 
         .logo {
             width: 160px;
+            box-shadow: 8px 3px 3px #e3e8ec;
+            border-radius: 9px;
         }
 
         .navItems {
@@ -104,3 +110,4 @@ sans-serif;
 
 
 }
+
