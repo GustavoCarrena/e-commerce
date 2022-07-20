@@ -4,26 +4,37 @@ Helvetica,
 sans-serif;
 
 
-.navBarContainer {
+.navBarContainer, #nav {
     background-color: rgb(241, 241, 241) !important;
-    box-shadow: 0 5px 0 rgb(233, 227, 227);
+    box-shadow: inset -1px 0px 20px 4px rgb(233 227 227);
     height: 64px;
     width: 100% !important;
+    position: sticky;
+    padding: 0;
+    margin: 0;
+    
 
-    .container {
-        margin: 0 2%;
-        width: 100%;
-        padding: 0 0 0 2%;
+    .container, .navbar > .container {
+        width: 95%;
+        max-width: 95%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+
 
         @media(max-width: 990px) {
-            
+
             .basicNavbarNav {
-                width: 100vw;
+                margin: 0 !important;
+                width: 100%;
                 position: absolute;
-                left: 0px;
+                left: 0;
+                right: 0;
                 top: 69px;
                 background-color: rgb(241, 241, 241) !important;
                 transition: 0.5s linear;
+                
 
                 .meAuto {
                     display: flex;
@@ -33,14 +44,15 @@ sans-serif;
                     height: 100vh;
                     text-align: center;
 
-                    .navItems, .navbar-light .navbar-nav .show > .nav-link {
+                    .navItems,
+                    .navbar-light .navbar-nav .show>.nav-link {
                         display: flex;
                         flex-flow: column nowrap;
                         margin-top: 31px;
                         width: 100%;
                         height: auto;
                         justify-content: center;
-                        align-items:center;
+                        align-items: center;
                         text-decoration: none !important;
                         font-size: 1.4rem;
 
@@ -58,8 +70,7 @@ sans-serif;
 
         .logo {
             width: 160px;
-            box-shadow: 8px 3px 3px #e3e8ec;
-            border-radius: 9px;
+
         }
 
         .navItems {
@@ -83,31 +94,29 @@ sans-serif;
             &:hover {
                 color: brown !important;
             }
-        }
 
-        .navItemsDrop{
-            font-weight: bold;
-            font-family: $font-family;
-            display: flex;
-            flex-flow: row nowrap;
-            width:100%;
-            height: auto;
-            justify-content:center;
-            align-items: center;
-            color: rgba(0, 0, 0, 0.55) !important;
-            text-decoration: none !important;
-            padding: 1%;
-            
-            :hover {
-                color: brown !important;
+            .navItemsDrop {
+                font-weight: bold;
+                font-family: $font-family;
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                color: rgba(0, 0, 0, 0.55) !important;
+                text-decoration: none !important;
+                padding: 1%;
+                background-color: #fff;
+
+
+                &:hover {
+                    color: brown !important;
+                }
+
             }
 
-            &:hover {
-                color: brown !important;
-            }
         }
     }
-
-
 }
 

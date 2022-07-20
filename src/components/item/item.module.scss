@@ -11,24 +11,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 420px;
+    width: 25%;
     max-width: 50%;
     max-height: 433px;
     min-height: 433px;
-    margin-bottom: 25px;
+    margin: 5px 15px 25px 25px;
+
+    @media(max-width: 1024px) {
+        width: 30%;
+    }
 
 
+    @media(max-width: 768px) {
+        width: 40%;
+    }
 
-    @media(max-width: 767px) {
-        width: 540px;
-        max-width: 90%;
-        margin-bottom: 50px;
+    @media(max-width: 600px) {
+        width: 85%;
     }
 
     .itemCard {
-        width: 79%;
+        width: 100%;
         margin: 10px;
-        height: 350px;
+        height: 380px;
         box-shadow: inset 9px 9px 44px 3px rgb(233 227 227);
         border-radius: 9px;
 
@@ -36,17 +41,21 @@
             height: 380px;
         }
 
+        @media(max-width: 600px) {
+            min-width: 270px;
+        }
+
         .header {
             @include flex-row-center();
             position: absolute;
             text-align: center;
             color: #59606a;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 400;
             width: 100%;
             height: auto;
             min-height: 94px;
-            padding: 15px 23px;
+            padding: 15px;
             font-family: fantasy;
             border: none;
 
@@ -58,17 +67,27 @@
 
         .imgContainer {
             @include flex-row-center();
-            width: 90%;
+            width: 95%;
             align-self: center;
             height: 81%;
 
-            .img {
-                margin-top: 95px;
+            @media (max-width: 600px) {
                 width: 80%;
-                height: 80%;
-                max-height: 100%;
+            }
+
+            .img {
+                margin-top: 130px;
+                width: 70%;
+                height: auto;
+                max-height: 75%;
                 object-fit: contain;
-                align-self: flex-start;
+                align-self: center;
+
+                @media (max-width: 600px) {
+                    margin-top: 123px;
+                    width: 80%;
+                    min-width: 175px;
+                }
             }
         }
 
@@ -80,7 +99,7 @@
         box-shadow: 2px 2px 8px 2px #c7d6ea91;
     }
 
-    .itemCard:hover > .imgContainer{
+    .itemCard:hover>.imgContainer {
         transform: scale(1.15);
         transition: 0.3s linear;
         z-index: -1;
@@ -88,50 +107,26 @@
 
     .text {
         position: absolute;
-        top: -20px;
+        top: -21px;
         right: 0;
         font-family: "Poppins", Arial, Helvetica, sans-serif;
-        background-color: #f1f1f1 !important;
-        color: rgb(102 37 4 / 40%);
+        /* background-color: #f1f1f1 !important; */
+        color: rgba(20, 24, 28, 0.6);
         font-weight: 500;
-        width: 250px;
-        border-radius: 5px;
-        text-align: center;
+        width: auto;
+        border-radius: 20%;
+        text-align: end;
         max-width: 95%;
-
+        opacity: 0.4;
+        padding: 0;
+        font-size: 0.9rem;
         @media(max-width: 425px) {
             font-size: 0.8rem;
             padding: 2px 8px;
             top: -25px;
-            box-shadow: 3px 3px 3px 1px rgb(233 227 227);
             right: 7px;
         }
     }
-
-    // .button {
-    //     position: absolute;
-    //     bottom: -17px;
-    //     left: 0;
-    //     border-radius: 7px;
-    //     background-color: rgb(56 57 45 / 80%);
-    //     border: none;
-    //     color: #dcd0d0;
-    //     font-family: "Poppins";
-    //     height: 32px;
-    //     font-size: 0.85rem;
-    //     font-weight: 600;
-
-    //     @media(max-width: 425px) {
-    //         max-width: 192px;
-    //     }
-    // }
-
-    // .button:hover {
-    //     box-shadow: 0px 0px 8px 4px #b8d223ab;
-    //     color: #f1e7e7;
-    //     transition: 0.1s linear;
-    //     transform: scale(1.01);
-    // }
 
     .stock {
         position: absolute;
@@ -148,6 +143,6 @@
     }
 }
 
-.item:hover{
+.item:hover {
     cursor: pointer;
 }

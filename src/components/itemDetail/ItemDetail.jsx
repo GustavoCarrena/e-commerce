@@ -10,11 +10,14 @@ import "animate.css";
 
 export const ItemDetail = ({ product }) => {
   //Parcial hasta que se Calcule stock - compra
-  const random = () => Math.floor(Math.random() * 10 + 1);
-  const stock = random(1, 50);
+  // const random = () => Math.floor(Math.random() * 10 + 1);
+  const stock = product.stock;
   const [show, setShow] = useState(false);
   const {addProduct} = useContext(Shop);
   const navigate = useNavigate();
+
+  // console.log('product=>', product);
+  // console.log('stock=>', product.stock);
 
   const handle = {
     confirm : (counter) => { setShow(true); addProduct(product, counter)},
@@ -37,45 +40,12 @@ export const ItemDetail = ({ product }) => {
         </Card.Text>
         {
           !show
-          ?
-            <ItemCount
-            className={styles.counter}
-            initialValue={1}
-            stock={stock}
-            onConfirm={handle.confirm}
-            />
-          : 
-
-            <div className="continueBuy" style={{
-              display: 'flex',
-              'flex-flow': 'row nowrap',
-              'align-items': 'center',
-              'justify-content': 'space-between',
-              width:'100%'
-            }}>
-              <Button variant="primary" onClick={handle.toHome}
-              style={{
-                'font-size': '0.8rem',
-                  width:'135px',
-                  padding: '8px 3px'
-              }}
-              >
-                Seguir Comprando
-              </Button>
+          ? <ItemCount className={styles.counter} initialValue={1} stock={stock} onConfirm={handle.confirm}/>
+          : <div className={styles.continueBuy}>
+              <Button className={styles.btn} variant="primary" onClick={handle.toHome}>Seguir Comprando</Button>
               <span>  </span>
-              <Button 
-                variant="success"
-                onClick={handle.toCart}
-                style={{
-                  'font-size': '0.8rem',
-                  width:'135px',
-                  padding: '8px 3px'
-                }}
-              >
-                Ir al Comprar
-              </Button>
+              <Button className={styles.btn} variant="success"onClick={handle.toCart}>Ir al Comprar</Button>
             </div>
-
         }
       </Card>
     </div>

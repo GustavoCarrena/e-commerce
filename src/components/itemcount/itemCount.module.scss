@@ -22,9 +22,22 @@
         @media(max-width: 500px) {
             width: fit-content;
             position: absolute;
-            top: 0;
-            left: 0;
+            top: -107px;
+            left: 200px;
             margin: 5px 0;
+            font-size: 0.7rem;
+        }
+
+        @media(max-width: 465px) {
+            left: 182px;
+        }
+
+        @media(max-width: 425px) {
+            left: 168px;
+        }
+
+        @media(max-width: 375px) {
+            left: 47%;
         }
 
     }
@@ -37,8 +50,8 @@
 
         @media(max-width: 500px) {
             position: absolute;
-            top: -101px;
-            right: 18px;
+            top: -165px;
+            left: 44%;
         }
 
         .buttons {
@@ -71,8 +84,21 @@
         font-size: 0.8rem;
         padding: 9px 5px;
 
+        @media(max-width: 500px) {
+            position: absolute;
+            top: -82px;
+            left: 46%;
+        }
+
         @media(max-width: 600px) {
             margin-bottom: 10px;
+        }
+
+        @media(max-width: 375px) {
+            margin-top: 12px;
+            width: 112px;
+            font-size: 0.6rem;
+
         }
     
 

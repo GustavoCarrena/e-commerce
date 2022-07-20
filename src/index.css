@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+  height: 100vh;
+}
+
+  #nav,.bg-light{
+    background-color: rgb(241, 241, 241) !important;
+}
+
+
+.navbar-expand-lg .navbar-collapse{
+  margin-left: 1% !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

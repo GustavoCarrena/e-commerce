@@ -1,16 +1,10 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../item/item.module.scss";
 import Card from "react-bootstrap/Card";
 
 export const Item = ({ product }) => {
 
-  const stockRandom = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
-
   const navigate = useNavigate();
-
   const handleDetail = () => {
     navigate(`/detail/${product.id}`);
   };
@@ -26,7 +20,8 @@ export const Item = ({ product }) => {
           Categoría: {product.category}
         </Card.Text>
         <Card.Text className={styles.stock}>
-          Stock: {stockRandom(5, 20)}
+          
+          Stock: {product.stock}
         </Card.Text>
       </Card>
     </div>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { Shop } from "../../../context/ShopContext";
+import { Shop } from "../../context/ShopContext";
 import styles from "./cart.module.scss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -12,13 +12,14 @@ export const Cart = () => {
   const handleClearAllProducts = () => clearAllCart();
   const navigate = useNavigate()
   const handleButtonCart = () => navigate('/')
+  const handleBuy = () => navigate('/form')
   return (
     <div className={styles.body}>
        {cart.length > 0 ?
         (
           <>
           <div className={styles.submitCoontainer}>
-              <button className={styles.buyBtn} >Comprar</button>
+              <button onClick={handleBuy} className={styles.buyBtn} >Comprar</button>
               {/* <div className={styles.buyMount}>Monto Total: ${totalCartPrice}</div>  */}
             <button className={styles.clearBtn} onClick={handleClearAllProducts}>Limpiar Carrito</button>
           </div>

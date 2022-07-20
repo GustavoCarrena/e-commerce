@@ -10,19 +10,19 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 export const NavBar = () => {
 
      return (
-        <Navbar collapseOnSelect bg="light" expand="lg" sticky='top' className={`${styles.navBarContainer}`}>
-            <Container style={{ 'maxWidth': '92%' }} className={`${styles.container}`}>
+        <Navbar id='nav' collapseOnSelect bg="light" expand="lg" sticky='top' className={`${styles.navBarContainer}`}>
+            <Container className={`${styles.container}`}>
             <Link to={'/'}><img src='/assets/img/logo.png' className={styles.logo} alt="logo" /></Link>
                 <CartWidget className={styles.cartWidget}/>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id='basic-navbar-nav' className={styles.basicNavbarNav}>
                     <Nav className={`me-auto ${styles.meAuto}`}>
-                    <Nav.Link eventKey="1"><Link to='/category/jewelery' className={styles.navItems}>Jewelery</Link></Nav.Link>
-                    <Nav.Link eventKey="2"><Link to='/category/electronics' className={styles.navItems}>Electronics</Link></Nav.Link>
+                    <Nav.Link as={Link} eventKey="1" to='/category/jewelery' className={styles.navItems}>Jewelery</Nav.Link>
+                    <Nav.Link as={Link} eventKey="2" to='/category/electronics' className={styles.navItems}>Electronics</Nav.Link>
                         <NavDropdown className={`${styles.navItems}`} variant="primary" title="Clothing" id="basic-nav-dropdown">
-                        <NavDropdown.Item eventKey="3" className={styles.navItemsDrop}><Link to="/category/women's clothing" className={styles.navItemsDrop}>Women's clothing</Link></NavDropdown.Item>
+                        <NavDropdown.Item as={Link} eventKey="3" className={styles.navItemsDrop} style={{'active': 'background-color: red'}} to="/category/women's clothing">Women's clothing</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item eventKey="4" className={styles.navItemsDrop}><Link to="/category/men's clothing" className={styles.navItemsDrop}>men's clothing</Link></NavDropdown.Item>
+                            <NavDropdown.Item as={Link} eventKey="4" className={styles.navItemsDrop} to="/category/men's clothing" >men's clothing</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
