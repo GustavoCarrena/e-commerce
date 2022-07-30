@@ -53,6 +53,9 @@
             top: -165px;
             left: 44%;
         }
+        @media(max-width: 400px) {
+            max-width: 120px;
+        }
 
         .buttons {
             color: white;

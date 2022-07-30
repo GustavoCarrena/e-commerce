@@ -192,10 +192,8 @@
                 width: 100%;
                 height: auto;
                 margin: 0;
-            }
-
-            @media(max-width: 500px) {
                 font-size: 0.6rem;
+                max-width: 170px;
             }
 
 
