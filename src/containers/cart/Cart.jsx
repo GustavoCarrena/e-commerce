@@ -54,10 +54,8 @@ export const Cart = () => {
               </Col>
               <Col className={styles.bodyCol2}>{item.product.title}</Col>
               <Col className={styles.bodyCol3}>{item.quantity}</Col>
-              {/* <Col className={styles.bodyCol4}>${parseFloat(item.product.price).toFixed(2)}</Col> */}
               <Col className={styles.bodyCol4}>${item.product.price.toLocaleString('es-ES')}</Col>
               <Col className={styles.bodyCol5}>
-                {/* ${item.totalMount().toFixed(2)} */}
                 ${item.totalMount().toLocaleString('es-ES')}
               </Col>
               <Col className={styles.bodyCol6}>
