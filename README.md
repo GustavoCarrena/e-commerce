@@ -17,11 +17,23 @@ El proyecto cuenta con protección de rutas por la eventual manipulación del ur
 - `url/detail/id`: Si el producto no cuenta con stock, alerta y redirige a página principal.
 - Formulario de datos personales`url/form`: si se fuerza a la entrada y no existen productos en el carrito de compras, alerta y redirige a página principal.
 - Validaciones en los campos del formulario de datos personales (ninguno admite el campo vacío, ya que es requisito para que se habilite el botón de datos de tarjeta de crédito):
+
+
 -- Campo "Nombre" y campo "Apellido": mínimo de 3 carateres y no permite números.
+
+
 -- Campo "Teléfono": no permite caracteres alfabéticos y los numéricos deben ser de 8 a 14 dígitos.
+
+
 -- Campo "email": sólo formato válido de email.
+
+
 - Validaciones en los campos del formulario de datos de tarjeta de crédito (ninguno admite el campo vacío, ya que es requisito para que se habilite el botón de "comprar" ):
+
+
 -- Campo número de tarjeta: 16 caracteres numéricos obligatorios. No admite otros tipos de caracteres.
+
+
 -- Campo código de seguridad de tarjeta: 3 caracteres numéricos obligatorios. No admite otros tipos de caracteres.
 
 
