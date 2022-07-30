@@ -5,10 +5,10 @@ export class CartItem {
         this.product = product;
         this.quantity = quantity;
     }
-
+    
     totalMount() {
-        return (this.product.price.toFixed(2) * this.quantity);
-    }
+        return (this.product.price * this.quantity);
+       }
 
     setQuantity(quantity) {
         this.quantity = quantity;

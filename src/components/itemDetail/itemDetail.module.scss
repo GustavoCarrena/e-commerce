@@ -123,6 +123,7 @@
         font-family: 'Poppins';
         margin-right: 1%;
         background-color: #F1F1F1;
+
         @media(max-width: 600px) {
             margin-left: 5%;
 
@@ -141,6 +142,13 @@
                 font-size: 0.8rem;
                 padding: 5px 2px;
                 margin-right: 10px;
+
+                @media(max-width: 425px) {
+                    min-width: 129px;
+                    font-size: 0.7rem;
+                    margin-top: 5px;
+                }
+
             }
 
         }

@@ -35,7 +35,7 @@ export const Item = ({ product }) => {
           Categoría: {product.category}
         </Card.Text>
         <Card.Text className={styles.stock}>
-          <small>Precio: ${product.price}</small> 
+          <small>Precio: ${product.price.toLocaleString('es-ES')}</small> 
           <small>Stock: {product.stock}</small> 
         </Card.Text>
       </Card>

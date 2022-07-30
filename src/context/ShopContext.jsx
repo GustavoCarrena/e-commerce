@@ -23,7 +23,7 @@ export const ShopContext = ({ children }) => {
     return cart
       .map((item) => parseFloat(item.totalMount()))
       .reduce((prev, curr) => prev + curr, 0)
-      .toFixed(2);
+      .toLocaleString('es-ES')
   }, [cart]);
 
   const clearAllCart = () => setCart([]);

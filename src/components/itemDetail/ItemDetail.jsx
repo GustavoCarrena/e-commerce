@@ -33,7 +33,7 @@ export const ItemDetail = ({ product }) => {
       <Card className={styles.bodyContainer}>
         <Card.Title className={styles.title}>{product.title}</Card.Title>
         <Card.Title className={styles.price}>
-          Precio Unitario: ${product.price}{" "}
+          Precio Unitario: ${product.price.toLocaleString('es-ES')}{" "}
         </Card.Title>
         <Card.Text className={styles.description}>
           {product.description}

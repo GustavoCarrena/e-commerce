@@ -26,7 +26,8 @@ El proyecto cuenta con protección de rutas por la eventual manipulación del ur
 
 ## Instalaciones y configuraciones necesarias
 Es necesaria la instalación de [Node.js](https://nodejs.org/).
-La configuración del ambiente de desarrollo se realizó mediante [Create React App](https://github.com/facebook/create-react-app)
+La configuración del ambiente de desarrollo se realizó mediante [Create React App](https://github.com/facebook/create-react-app)  
+
 Los paquetes se instalaron con el gestor [Node Package Manager (npm)](https://www.npmjs.com/)
 ### Dependencias incluidas en el proyecto
 [Firebase/ Firestore](https://firebase.google.com/) : base de datos de documentos NoSQL.  
