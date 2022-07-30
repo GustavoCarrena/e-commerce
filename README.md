@@ -26,16 +26,22 @@ El proyecto cuenta con protección de rutas por la eventual manipulación del ur
     - Campo código de seguridad de tarjeta: 3 caracteres numéricos obligatorios. No admite otros tipos de caracteres.
 
 ## Instalaciones y configuraciones necesarias
-Es necesaria la instalación de [Node.js](https://nodejs.org/)
+Es necesaria la instalación de [Node.js](https://nodejs.org/).
 La configuración del ambiente de desarrollo se realizó mediante [Create React App](https://github.com/facebook/create-react-app)
 Los paquetes se instalaron con el gestor [Node Package Manager (npm)](https://www.npmjs.com/)
 ### Dependencias incluidas en el proyecto
-[Firebase/ Firestore](https://firebase.google.com/) : base de datos de documentos NoSQL.
-[React-bootstrap](https://react-bootstrap.github.io/) : Utlizado en estructura jsx de componentes.
-[Bootstrap](https://getbootstrap.com/) : Utilizado en estilos.
-[Sass](https://sass-lang.com/) : Utilizado para la mayoría de los estilos. (*) Se establecieron los estilos mediante modularización, para que de este modo, cada componente sea estilado mediante un único archivo.
-[Sweetalert2](https://sweetalert2.github.io/) : Utilizado para confirmación de transacciones y errores.
-[Animate.css](https://animate.style/) : Utilizado para lograr efectos visuales en la renderización de los productos.
+[Firebase/ Firestore](https://firebase.google.com/) : base de datos de documentos NoSQL.  
+
+[React-bootstrap](https://react-bootstrap.github.io/) : Utlizado en estructura jsx de componentes.  
+
+[Bootstrap](https://getbootstrap.com/) : Utilizado en estilos.  
+
+[Sass](https://sass-lang.com/) : Utilizado para la mayoría de los estilos. (*) Se establecieron los estilos mediante modularización, para que de este modo, cada componente sea estilado mediante un único archivo.  
+
+[Sweetalert2](https://sweetalert2.github.io/) : Utilizado para confirmación de transacciones y errores.  
+
+[Animate.css](https://animate.style/) : Utilizado para lograr efectos visuales en la renderización de los productos.  
+
 ## Ingreso al código e instalación de paquetes
 Dentro de la terminal (integrada o externa), posicionarse en la carpeta e-commerce mediante el comando "cd":
 ```sh
