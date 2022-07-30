@@ -7,36 +7,36 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export const Cart = () => {
-  
-  const { cart, clearProduct, clearAllCart, totalCartPrice  } = useContext(Shop);
-  const handleClearAllProducts = () => clearAllCart();
-  const navigate = useNavigate()
-  const handleButtonCart = () => navigate('/')
-  const handleBuy = () => navigate('/form')
+  const { cart, clearProduct, clearAllCart, totalCartPrice } = useContext(Shop);
+  const navigate = useNavigate();
+
   return (
     <div className={styles.body}>
-       {cart.length > 0 ?
-        (
-          <>
+      {cart.length > 0 ? (
+        <>
           <div className={styles.submitCoontainer}>
-              <button onClick={handleBuy} className={styles.buyBtn} >Comprar</button>
-              {/* <div className={styles.buyMount}>Monto Total: ${totalCartPrice}</div>  */}
-            <button className={styles.clearBtn} onClick={handleClearAllProducts}>Limpiar Carrito</button>
+            <button onClick={() => navigate("/form")} className={styles.buyBtn}>
+              Comprar
+            </button>
+            <button className={styles.clearBtn} onClick={clearAllCart}>
+              Limpiar Carrito
+            </button>
           </div>
-          <div className={styles.buyMount}><span>Monto Total: ${totalCartPrice}</span></div> 
-          </>
-        )
-        : (
-            <div className={styles.container}>
-              <img className={styles.img} src="/assets/img/cart.svg" alt="imag" />
-              <div className={styles.info}>
-                <p className={styles.title}>No hay productos en el carrito</p>
-                <button onClick={handleButtonCart} className={styles.button}>Ir a comprar</button>
-              </div>
-            
-            </div>
-          )
-      }
+          <div className={styles.buyMount}>
+            <span>Monto Total: ${totalCartPrice}</span>
+          </div>
+        </>
+      ) : (
+        <div className={styles.container}>
+          <img className={styles.img} src="/assets/img/cart.svg" alt="imag" />
+          <div className={styles.info}>
+            <p className={styles.title}>No hay productos en el carrito</p>
+            <button onClick={() => navigate("/")} className={styles.button}>
+              Ir a comprar
+            </button>
+          </div>
+        </div>
+      )}
       {cart.map((item) => {
         return (
           <Container className={styles.container} key={item.product.id}>
@@ -54,16 +54,23 @@ export const Cart = () => {
               </Col>
               <Col className={styles.bodyCol2}>{item.product.title}</Col>
               <Col className={styles.bodyCol3}>{item.quantity}</Col>
-              <Col className={styles.bodyCol4}>${parseFloat(item.product.price).toFixed(2)}</Col>
-              <Col className={styles.bodyCol5}>${item.totalMount().toFixed(2)}</Col>
+              <Col className={styles.bodyCol4}>
+                ${parseFloat(item.product.price).toFixed(2)}
+              </Col>
+              <Col className={styles.bodyCol5}>
+                ${item.totalMount().toFixed(2)}
+              </Col>
               <Col className={styles.bodyCol6}>
-                <img onClick={ () => clearProduct(item.product)} src="/assets/img/trash.png" alt="delete" />
+                <img
+                  onClick={() => clearProduct(item.product)}
+                  src="/assets/img/trash.png"
+                  alt="delete"
+                />
               </Col>
             </Row>
           </Container>
         );
       })}
-      {/* <div className={styles.buyMount}><span>Monto Total: ${totalCartPrice}</span></div>  */}
     </div>
   );
 };

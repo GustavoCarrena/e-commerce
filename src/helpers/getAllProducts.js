@@ -1,6 +1,5 @@
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from '../firebase/config';
-import { postAllProducts } from "../utils/postAllProducts";
 
 export const getAllProducts = async () => {
     const q = query(collection(db, "products"));
@@ -9,7 +8,6 @@ export const getAllProducts = async () => {
     querySnapshot.forEach((doc) => {
         products.push({ id: doc.id, ...doc.data() })
     });
-    return products;
+    return products
     // postAllProducts()
-
 };

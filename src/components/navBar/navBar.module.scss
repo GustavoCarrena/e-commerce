@@ -31,35 +31,34 @@ sans-serif;
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 69px;
+                top: 63px;
                 background-color: rgb(241, 241, 241) !important;
                 transition: 0.5s linear;
-                
 
                 .meAuto {
                     display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: flex-start;
-                    align-items: center;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: flex-start;
                     height: 100vh;
                     text-align: center;
-
                     .navItems,
                     .navbar-light .navbar-nav .show>.nav-link {
                         display: flex;
                         flex-flow: column nowrap;
-                        margin-top: 31px;
-                        width: 100%;
+                        margin-top: 15px;
                         height: auto;
                         justify-content: center;
                         align-items: center;
                         text-decoration: none !important;
-                        font-size: 1.4rem;
+                        font-size: 1.5rem;
+                        padding: 0;
 
                         :nth-child(n) {
                             margin: 3px;
                             background-color: rgb(241, 241, 241) !important;
                             border: none;
+                            padding: 0;
                         }
 
                     }

@@ -1,14 +1,15 @@
-export const generarOrden = (name, surname,adress, phone, email, paymethod, cart, total) => {
+export const generateOrder = (name, surname, phone, email, addres, cart, paymethod,cardNumber, total) => {
     return {
         buyer: {
             name: name,
             surname: surname,
-            adress: adress,
             phone: phone,
             email: email,
+            adress: addres,
         },
         items: cart,
         paymethod: paymethod,
+        cardNumber: cardNumber,
         total: total,
         createdAt: new Date().toLocaleString()
     }

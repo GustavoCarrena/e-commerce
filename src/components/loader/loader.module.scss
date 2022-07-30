@@ -7,13 +7,14 @@
         align-items: center;
         justify-content: space-evenly;
         position: absolute;
-        top: 25%;
+        top: 60%;
         right: 45%;
         background-color: #fff;
         padding: 50px 100px;
         box-shadow: inset 9px 9px 44px 3px rgb(255, 255, 255);
         opacity:1;
         border: none;
+        z-index: -1;
 
         @media(max-width: 768px){
             right: 35%;

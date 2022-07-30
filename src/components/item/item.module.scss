@@ -13,9 +13,7 @@
     justify-content: center;
     width: 25%;
     max-width: 50%;
-    max-height: 433px;
-    min-height: 433px;
-    margin: 5px 15px 25px 25px;
+    margin: 10px 15px;
 
     @media(max-width: 1024px) {
         width: 30%;
@@ -33,16 +31,14 @@
     .itemCard {
         width: 100%;
         margin: 10px;
-        height: 380px;
-        box-shadow: inset 9px 9px 44px 3px rgb(233 227 227);
+        height: 290px;
+        box-shadow: inset 1px -1px 44px 20px rgb(58 58 58 / 33%);
         border-radius: 9px;
-
-        @media(max-width: 767px) {
-            height: 380px;
-        }
+        border: none;
 
         @media(max-width: 600px) {
             min-width: 270px;
+
         }
 
         .header {
@@ -54,10 +50,10 @@
             font-weight: 400;
             width: 100%;
             height: auto;
-            min-height: 94px;
-            padding: 15px;
+            min-height: 60px;
             font-family: fantasy;
             border: none;
+            bottom: 11px;
 
             @media(max-width: 425px) {
                 font-size: 1rem;
@@ -66,25 +62,32 @@
         }
 
         .imgContainer {
-            @include flex-row-center();
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            justify-content: center;
             width: 95%;
             align-self: center;
-            height: 81%;
+            height: 85%;
 
             @media (max-width: 600px) {
                 width: 80%;
             }
 
             .img {
-                margin-top: 130px;
-                width: 70%;
+                margin-top: 13px;
                 height: auto;
-                max-height: 75%;
+                max-height: 65%;
                 object-fit: contain;
                 align-self: center;
+                max-width: 85%;
+                width: auto;
+                border-radius: 9px;
+                box-shadow: 0px 0px 20px 20px rgb(58 58 58 / 33%);
+                backdrop-filter: contrast(0.6);
+                filter: drop-shadow(2px 4px 6px rgb(58 58 58 / 33%));
 
                 @media (max-width: 600px) {
-                    margin-top: 123px;
                     width: 80%;
                     min-width: 175px;
                 }
@@ -96,30 +99,29 @@
     .itemCard:hover {
         transform: scale(1.05);
         transition: 0.5s linear;
-        box-shadow: 2px 2px 8px 2px #c7d6ea91;
     }
 
     .itemCard:hover>.imgContainer {
-        transform: scale(1.15);
+        transform: scale(1.1);
         transition: 0.3s linear;
         z-index: -1;
     }
 
     .text {
         position: absolute;
-        top: -21px;
-        right: 0;
+        top: 10px;
+        left: 17px;
         font-family: "Poppins", Arial, Helvetica, sans-serif;
-        /* background-color: #f1f1f1 !important; */
-        color: rgba(20, 24, 28, 0.6);
-        font-weight: 500;
+        color: #e8051c8d;
+        font-weight: 600;
         width: auto;
         border-radius: 20%;
         text-align: end;
         max-width: 95%;
-        opacity: 0.4;
+        opacity: 0.9;
         padding: 0;
         font-size: 0.9rem;
+
         @media(max-width: 425px) {
             font-size: 0.8rem;
             padding: 2px 8px;
@@ -130,17 +132,25 @@
 
     .stock {
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
         right: 10px;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-size: small;
         font-weight: bold;
         color: #59606a;
+        display: flex;
+        flex-flow: row wrap;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 3%;
 
         @media(max-width: 767px) {
             bottom: 14px;
         }
     }
+
+
 }
 
 .item:hover {

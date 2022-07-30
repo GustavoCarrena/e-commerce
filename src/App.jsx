@@ -5,10 +5,10 @@ import { ItemDetailContainer } from "./containers/itemDetailContainer/ItemDetail
 import { ItemListContainer } from "./containers/itemListContainer/ItemListContainer";
 import { PageNotFound } from "./components/pageNotFound/PageNotFound";
 import { Cart } from "./containers/cart/Cart";
+import { BuyForm} from "./components/form/BuyForm";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { BuyForm} from "./components/form/BuyForm";
 
 export const App = () => {
   return (
@@ -21,7 +21,7 @@ export const App = () => {
           <Route path="/detail/:productId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/form" element={<BuyForm/>}/>
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} />-
         </Routes>
       </BrowserRouter>
     </ShopContext>
