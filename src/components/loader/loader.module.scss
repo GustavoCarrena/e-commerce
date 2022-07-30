@@ -1,37 +1,12 @@
-
-.container{
-    
-    .spinner {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        position: absolute;
-        top: 60%;
-        right: 45%;
-        background-color: #fff;
-        padding: 50px 100px;
-        box-shadow: inset 9px 9px 44px 3px rgb(255, 255, 255);
-        opacity:1;
-        border: none;
-        z-index: -1;
-
-        @media(max-width: 768px){
-            right: 35%;
-        }
-
-        @media(max-width: 425px){
-            right: 25%;
-        }
-    
-        .loading {
-            color: rgb(77, 76, 81) !important;
-            font-weight: bold;
-            z-index: 999;
-            font-size: 1.8rem;
-            opacity: 0.35;
-        }
-    }
-
+.loading {
+    color: rgb(88, 58, 211) !important;
+    font-weight: bold;
+    z-index: 999;
+    font-size: 2rem;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 99999;
 }
 

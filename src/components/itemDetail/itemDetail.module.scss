@@ -5,6 +5,7 @@
     grid-template-rows: 1fr;
     align-items: flex-start;
     justify-content: start;
+    background-color: #F1F1F1;
 
     @media(max-width: 768px) {
         margin: 3% 0 0 0;
@@ -121,7 +122,7 @@
         justify-self: self-start;
         font-family: 'Poppins';
         margin-right: 1%;
-
+        background-color: #F1F1F1;
         @media(max-width: 600px) {
             margin-left: 5%;
 
