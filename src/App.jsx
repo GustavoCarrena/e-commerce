@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ShopContext } from "./context/ShopContext";
 import { NavBar } from "./components/navBar/NavBar";
@@ -12,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 export const App = () => {
   return (
+    <>
     <ShopContext>
       <BrowserRouter>
         <NavBar />
@@ -25,6 +27,7 @@ export const App = () => {
         </Routes>
       </BrowserRouter>
     </ShopContext>
+    </>
   );
 }
 

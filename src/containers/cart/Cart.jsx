@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Shop } from "../../context/ShopContext";
@@ -11,6 +12,7 @@ export const Cart = () => {
   const navigate = useNavigate();
 
   return (
+    <>
     <div className={styles.body}>
       {cart.length > 0 ? (
         <>
@@ -70,5 +72,6 @@ export const Cart = () => {
         );
       })}
     </div>
+    </>
   );
 };

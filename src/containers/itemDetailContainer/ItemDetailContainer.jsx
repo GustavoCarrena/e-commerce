@@ -1,3 +1,4 @@
+import React from 'react';
 import { ItemDetail } from "../../components/itemDetail/ItemDetail";
 import { Loader } from "../../components/loader/Loader";
 import { useFirebaseProductById } from "../../hooks/useFirebaseProductById";

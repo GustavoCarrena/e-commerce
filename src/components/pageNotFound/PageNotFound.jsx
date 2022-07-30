@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from "../pageNotFound/pageNotFound.module.scss";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";

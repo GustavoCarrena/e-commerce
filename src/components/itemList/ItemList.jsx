@@ -1,3 +1,4 @@
+import React from 'react';
 import { Item } from "../item/Item";
 import styles from "../itemList/itemList.module.scss";
 

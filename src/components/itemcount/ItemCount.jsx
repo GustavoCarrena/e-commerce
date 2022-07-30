@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from "../itemcount/itemCount.module.scss";
 import { useCounter } from "../../hooks/useCounter";
 
