@@ -8,5 +8,8 @@
     top: 55%;
     left: 40%;
     z-index: 99999;
+    @media(max-width: 425px){
+        left: 32%;
+    }
 }
 
