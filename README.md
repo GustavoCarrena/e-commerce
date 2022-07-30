@@ -4,7 +4,7 @@ Proyecto realizado por [Gustavo Carrena](https://www.linkedin.com/in/gustavo-her
 Proyecto de visualización y compra de productos vía selección en carrito de compras e ingreso de datos de contacto y pago.
 ## Navegabilidad
 
-[![Demo](/assets/video/gif.gif)
+[Demo](/assets/video/gif.gif)
 
 ## Protección de parámetros url y validaciones
 El proyecto cuenta con protección de rutas por la eventual manipulación del url:
