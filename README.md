@@ -1,5 +1,6 @@
 # `Ecommerce`
-Proyecto realizado por [Gustavo Carrena](https://www.linkedin.com/in/gustavo-hern%C3%A1n-carrena-3116b79/?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=ar) con [ReactJS]
+Proyecto realizado por [Gustavo Carrena](https://www.linkedin.com/in/gustavo-hern%C3%A1n-carrena-3116b79/?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=ar) con [ReactJS]  
+[URL del proyecto](https://carrena.netlify.app/)
 ## Reseña del proyecto
 Proyecto de visualización y compra de productos vía selección en carrito de compras e ingreso de datos de contacto y pago.
 ## Navegabilidad
