@@ -5,6 +5,28 @@
     align-items: center;
     justify-content: center;
 
+    @media(max-width: 768px) {
+        position: absolute;
+        top: 207px;
+        right: 117%;
+        width: fit-content;
+    }
+
+    @media(max-width: 500px) {
+        position: relative;
+        top: -42px;
+        right: -12%;
+        width: fit-content;
+    }
+
+    @media(max-width: 425px) {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: fit-content;
+    }
+
+
     .stock {
 
         margin: -10px 0 5px 0;
@@ -19,25 +41,41 @@
             margin: -10px 0 7px 0;
         }
 
+        @media(max-width: 550px) {
+            left: 8%;
+            margin: 0;
+            position: relative;
+        }
         @media(max-width: 500px) {
             width: fit-content;
-            position: absolute;
-            top: -107px;
-            left: 200px;
-            margin: 5px 0;
+            position: relative;
+            top: -80px;
             font-size: 0.7rem;
+            left: -20%;
+            margin: 0;
         }
 
-        @media(max-width: 465px) {
-            left: 182px;
-        }
-
-        @media(max-width: 425px) {
-            left: 168px;
+        @media(max-width: 400px) {
+            left: -5%;
         }
 
         @media(max-width: 375px) {
-            left: 47%;
+            top: -224px;
+            left: -21px;
+        }
+
+        @media(max-width: 340px) {
+            left: -5%;
+        }
+
+        @media(max-width: 325px) {
+            top: -37px;
+            left: 1%;
+        }
+
+        @media(max-width: 300px) {
+            left: 0;
+            width: max-content;
         }
 
     }
@@ -49,18 +87,32 @@
         justify-content: space-between;
 
         @media(max-width: 500px) {
-            position: absolute;
-            top: -165px;
-            left: 44%;
+            position: relative;
+            top: -69px;
+            right: 23%;
         }
-        @media(max-width: 400px) {
-            max-width: 120px;
+
+        @media(max-width: 425px) {
+            position: relative;
+            right: 9%;
+        }
+
+        @media(max-width: 375px) {
+            top: -111px;
+            right: 18%;
+            width: 114px;
         }
 
         .buttons {
             color: white;
             margin: 0 10px;
             border: none;
+
+            @media(max-width:375px) {
+                width: 50px;
+                height: 28px;
+                padding: 0;
+            }
         }
 
         .counter {
@@ -87,23 +139,38 @@
         font-size: 0.8rem;
         padding: 9px 5px;
 
-        @media(max-width: 500px) {
-            position: absolute;
-            top: -82px;
-            left: 46%;
-        }
 
         @media(max-width: 600px) {
             margin-bottom: 10px;
         }
 
+        @media(max-width: 500px) {
+            position: relative;
+            top: -117px;
+            right: -124%;
+        }
+
+        @media(max-width: 425px) {
+            right: -102%;
+        }
+
+        @media(max-width: 400px) {
+            right: -111%;
+        }
+
         @media(max-width: 375px) {
-            margin-top: 12px;
             width: 112px;
             font-size: 0.6rem;
-
+            right: -89%;
+            top: -154px;
         }
-    
+
+        @media(max-width: 317px) {
+            width: 100px;
+            right: -80%;
+            top: -155px;
+        }
+
 
     }
 }

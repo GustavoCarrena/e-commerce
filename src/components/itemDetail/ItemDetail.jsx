@@ -61,7 +61,7 @@ export const ItemDetail = ({ product }) => {
               variant="success"
               onClick={handle.toCart}
             >
-              Ir al Comprar
+              Ir al Carrito
             </Button>
           </div>
         )}
